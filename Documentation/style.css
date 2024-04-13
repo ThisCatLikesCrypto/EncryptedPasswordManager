@@ -1,0 +1,78 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Calibri", sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #222;
+}
+
+header {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+h1, h2, h3, p {
+    color: #fff;
+}
+
+a {
+    color: #66aaff;
+}
+
+code {
+    background-color: #333;
+    color: #66aaff;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+pre {
+    background-color: #333;
+    color: #fff;
+    overflow-x: auto;
+}
+
+/* Tabs */
+
+.tab {
+ overflow: hidden;
+ border: 2px solid rgb(24, 55, 228);
+ background-color: grey;
+}
+
+.tab button {
+ background-color: inherit;
+ float: left;
+ border: none;
+ outline: none;
+ cursor: pointer;
+ padding: 14px 16px;
+ transition: 0.5s;
+}
+
+
+.tab button:hover {
+ background-color:coral;
+ font-weight: bold;
+}
+
+.tab button.active {
+ background-color:crimson;
+ color:whitesmoke;
+ font-weight: bold;
+}
+
+.tabcontent {
+ background-color:grey;
+ display: none;
+ padding: 6px 12px;
+ border: 1px solid black;
+ border-top: none;
+}

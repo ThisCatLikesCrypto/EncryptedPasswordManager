@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Calibri&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Documentation</h1>
+    </header>
+
+    <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Tab0')">main</button>
+    <button class="tablinks" onclick="openTab(event, 'Tab1')">eztxt</button>
+    <button class="tablinks" onclick="openTab(event, 'Tab2')">ezcrypt</button>
+    <button class="tablinks" onclick="openTab(event, 'Tab3')">ezpassword</button>
+    <button class="tablinks" onclick="openTab(event, 'Tab4')">ezlog</button>
+    <div id="Tab0" class="tabcontent">
+        <h6>‎</h6>
+        <h2>Functions:</h2>
+        <p>nothing yet</p>
+    </div>
+    <div id="Tab1" class="tabcontent">
+        <h6>‎</h6>
+        <h2>Functions:</h2>
+            <ul>
+                <li>
+                    <code>eztxt.write(name, data)</code> - Writes, where data is 'data' and the name of the file is 'name'.
+                </li>
+                <li>
+                    <code>eztxt.read(name)</code>        - Reads, where output is returned as 'data' and the name of the file is 'name'.
+                </li>
+                <li>
+                    <code>eztxt.readline(name, line)</code> - Reads the specified 'line' in the document 'name'.
+                </li>
+                <li>
+                    <code>eztxt.readlines(name)</code>      - Reads all lines in the file 'name' and returns them seperately in a list.
+                </li>
+                <li>
+                    <code>eztxt.append(name, data)</code> - Appends, where data is 'data' and the name of the file is 'name'.
+                </li>
+                <li>
+                    <code>eztxt.appends(name, data)</code> - Appends, where data is 'data' and the name of the file is 'name', and adds a space before the start of the data.
+                </li>
+                <li>
+                    <code>eztxt.appendn(name, data)</code> - Appends, where data is 'data' and the name of the file is 'name', and puts new data on a new line.
+                </li>
+            </ul>
+    </div>
+    <div id="Tab2" class="tabcontent">
+        <h6>‎</h6>
+        <h2>Functions:</h2>
+            <ul>
+                <li>
+                    <code>ezcrypt.encrypt(data, key)</code> - Encrypts 'data' with the key 'key' using AES-256 bit encryption. Returns the encrypted string.
+                </li>
+                <li>
+                    <code>ezcrypt.decrypt(data, key)</code> - Decrypts 'data' with the key 'key' using AES-256 bit encryption. Returns the decrypted string.
+                </li>
+            </ul>
+    </div>
+    <div id="Tab3" class="tabcontent">
+        <h6>‎</h6>
+        <h2>Functions:</h2>
+        <ul>
+            <li>
+                <code>ezpassword.check(input_, correcthash)</code> - Compares the user's inputted password 'input_' against the known hash of the correct password 'correcthash'. If they are matching, returns True, and if not, False.
+            </li>
+            <li>
+                <code>ezpassword.newpass(input_)</code> - Returns the sha256 hash of 'input_'.
+            </li>
+            <li>
+                <code>ezpassword.generate(sha256output, length)</code> - Generates a alphanumeric password of 'length' length, the default being 7 characters. 'sha256output' lets you choose whether the string returned will be sha256 or not. If 'sha256output' is 0 (default), it will return the generated password. If 'sha256output' is 1, it will return the sha256 hash of the generated password. If 'sha256output' is 2, it will return the sha256 hash and the password generated in a list in the format [password, sha256].
+            </li>
+        </ul>
+    </div>
+    <div id="Tab4" class="tabcontent">
+        <h6>‎</h6>
+        <h2>Functions:</h2>
+        <ul>
+            <li>
+                <code>ezlog.log(data)</code> - Saves a log with the date and time and then 'data' in a folder called 'logs' under the filename of '[today's date].log'. Also prints the log. MUST be in the same folder as eztxt.
+            </li>
+        </ul>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
